@@ -4,8 +4,8 @@ import pandas as pd
 from PIL import Image
 import numpy as pd
 import matplotlib.pyplot as plt
-
-
+import sqlalchemy as sq
+from pathlib import Path
 icon = Image.open("resources/co2.jpg")
 # Page Layout
 st.set_page_config(page_title="CO2 APP", page_icon=icon)
@@ -43,3 +43,4 @@ with st.sidebar:
         ],
         icons=["house", "droplet-fill", "droplet"],
     )
+file_input = Path("Emisiones_CO2\Data\CO2_EOR.db")
